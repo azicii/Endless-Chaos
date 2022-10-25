@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float attackDistance = 1f;
 
     NavMeshAgent navMeshAgent;
+    //Use Mathf.Infinity this so that the enemyAI doesn't instantiate thinking that its distanceToTarget is 0
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
     
