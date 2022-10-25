@@ -310,6 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1023503907524402562}
+  - component: {fileID: 1840800144}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -332,6 +333,20 @@ Transform:
   m_Father: {fileID: 400000}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1.553, y: -90.804, z: 2.581}
+--- !u!114 &1840800144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177521183103980516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd32b9af1ac0ea4baf69e1b0805ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPCamera: {fileID: 2000000}
+  range: 100
 --- !u!1001 &5475279887926762737
 PrefabInstance:
   m_ObjectHideFlags: 0
