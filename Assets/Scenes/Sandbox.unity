@@ -2740,25 +2740,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 93e86b57e56570d46814839867bf9a52, type: 3}
   m_PrefabInstance: {fileID: 1387817226}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1516378783 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2551567389852847711, guid: e99f75269d114404e8c83526f104f9b7, type: 3}
-  m_PrefabInstance: {fileID: 2551567389678639857}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1516378784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516378783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50be55455080ff34ca9558b395d4b8bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 139115830}
-  attackDamage: 10
 --- !u!1001 &1633035035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3461,5 +3442,9 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.1773
       objectReference: {fileID: 0}
+    - target: {fileID: 7992682220845598114, guid: e99f75269d114404e8c83526f104f9b7, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 139115830}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e99f75269d114404e8c83526f104f9b7, type: 3}
