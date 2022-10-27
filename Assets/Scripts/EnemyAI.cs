@@ -53,16 +53,10 @@ public class EnemyAI : MonoBehaviour
 
     void ChaseTarget()
     {
-        animator.SetBool("isMoving", true);
-        animator.SetBool("isAttacking", false);
-        
         navMeshAgent.SetDestination(target.position);
-        
-        if (distanceToTarget >= chaseRange)
-        {
-            navMeshAgent.isStopped = true;
-            animator.SetBool("isMoving", false);
-        }
+
+        animator.SetTrigger("isMoving");
+        animator.SetBool("isAttacking", false);
     }
 
     void AttackTarget()
