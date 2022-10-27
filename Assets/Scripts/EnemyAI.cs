@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
     //Use Mathf.Infinity this so that the enemyAI doesn't instantiate thinking that its distanceToTarget is 0
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
-    
+    [SerializeField] float turnSpeed = 1f;
 
     void Start()
     {
@@ -40,6 +40,7 @@ public class EnemyAI : MonoBehaviour
 
     void EngageTarget()
     {
+        FaceTarget();
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
@@ -64,6 +65,16 @@ public class EnemyAI : MonoBehaviour
         animator.SetBool("isAttacking", true);
 
         Debug.Log("HIYA");
+    }
+
+    void FaceTarget()
+    {
+        //direction variable of type vector3 gives us the direction that we want this gameobject to rotate with magnitude of 1 (.normalized)
+        Vector3 direction = (target.position - transform.position).normalized;
+        //lookRotation variable of type quaternion gives us the rotation that we want this gameobject to make. where do we need to rotate essentially. 
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        //Quaternion.Slerp lets us rotate smoothly (spherical interpolation) between 2 vectors. 
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
     }
 
     void OnDrawGizmosSelected()

@@ -3423,6 +3423,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 139115830}
     - target: {fileID: 2551567389852847685, guid: e99f75269d114404e8c83526f104f9b7, type: 3}
+      propertyPath: turnSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551567389852847685, guid: e99f75269d114404e8c83526f104f9b7, type: 3}
       propertyPath: chaseRange
       value: 10
       objectReference: {fileID: 0}
