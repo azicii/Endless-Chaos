@@ -18,5 +18,4 @@ public class EnemyAttack : MonoBehaviour
 
         player.TakeEnemyDamage(attackDamage);
     }
-    
 }

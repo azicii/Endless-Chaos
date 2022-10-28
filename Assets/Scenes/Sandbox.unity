@@ -533,7 +533,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
   m_PrefabInstance: {fileID: 673783803}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &115147914
+--- !u!114 &115147918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3897,6 +3897,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1516378784, guid: e99f75269d114404e8c83526f104f9b7, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1516378784, guid: e99f75269d114404e8c83526f104f9b7, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
