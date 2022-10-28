@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuTracker : MonoBehaviour
 {
-
     public void ReloadLevel()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 
@@ -16,6 +16,4 @@ public class MenuTracker : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
-
-
 }
