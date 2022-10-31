@@ -2040,21 +2040,49 @@ PrefabInstance:
       propertyPath: gameOverMenu
       value: 
       objectReference: {fileID: 561039047}
+    - target: {fileID: 2132783081, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: range
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132783081, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166179599504479126, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 1761805701}
+    - target: {fileID: 1166179599504479126, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: weaponDamage
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3856206755946072867, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5474046889700719513, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7751520265820096375, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7751520265820096377, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952051905118888748, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952051905118888748, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 1761805701}
+    - target: {fileID: 7952051905118888748, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: weaponDamage
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
@@ -3825,6 +3853,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679382764}
   m_CullTransparentMesh: 1
+--- !u!20 &1761805701 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+  m_PrefabInstance: {fileID: 673783803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1821202155
 PrefabInstance:
   m_ObjectHideFlags: 0
