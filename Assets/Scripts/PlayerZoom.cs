@@ -6,18 +6,13 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class PlayerZoom : MonoBehaviour
 {
     [SerializeField] Camera FPScamera;
+    [SerializeField] RigidbodyFirstPersonController movementScript;
     [SerializeField] float zoomedInCamera = 12f;
     [SerializeField] float zoomedOutCamera = 60f;
     [SerializeField] float ZoomedSensitivity = 0.5f;
     [SerializeField] float UnzoomedSensitivity = 2f;
 
     bool togglePlayerZoom = false;
-    RigidbodyFirstPersonController movementScript;
-
-    void Start()
-    {
-        movementScript = GetComponent<RigidbodyFirstPersonController>();
-    }
 
     void Update()
     {
@@ -39,7 +34,5 @@ public class PlayerZoom : MonoBehaviour
                 movementScript.mouseLook.YSensitivity = UnzoomedSensitivity;
             }
         }
-        
     }
-
 }

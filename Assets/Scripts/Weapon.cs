@@ -10,9 +10,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] float weaponDamage = 10f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffectVFX;
+    [SerializeField] Ammo ammoSlot;
 
     GameObject parentGameObject;
-
 
 
     void Start()
@@ -28,10 +28,15 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
-        muzzleFlash.Play();
-        ProcessRaycast();
+        if (ammoSlot.currentAmmoCapacity() > 0)
+        {
+            muzzleFlash.Play();
+            ProcessRaycast();
+            ammoSlot.lowerAmmoAmount();
+        }
+        else { return; }
     }
 
     void ProcessRaycast()

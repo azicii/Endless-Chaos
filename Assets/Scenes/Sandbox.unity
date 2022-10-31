@@ -593,24 +593,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 44884af1ac1d64d42902da40268ba120, type: 3}
   m_PrefabInstance: {fileID: 97063175}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &115147913 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-  m_PrefabInstance: {fileID: 673783803}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &115147918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115147913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f33c90b613a578e408b78e245a356acc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 561039047}
 --- !u!1001 &115796569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2054,37 +2036,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1840800144, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: muzzleFlash
+    - target: {fileID: 115147918, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: gameOverMenu
       value: 
-      objectReference: {fileID: 673783804}
-    - target: {fileID: 1840800144, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: hitEffectVFX
-      value: 
-      objectReference: {fileID: 5358702043929965955, guid: 2994d2c466310664ba2c6be327008c2d, type: 3}
-    - target: {fileID: 2351442008916427490, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: m_Name
-      value: Muzzle Flash VFX
+      objectReference: {fileID: 561039047}
+    - target: {fileID: 3856206755946072867, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8257901408806819993, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: FPScamera
-      value: 
-      objectReference: {fileID: 1761805701}
-    - target: {fileID: 8257901408806819993, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: zoomedInCamera
-      value: 20
+    - target: {fileID: 5474046889700719513, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8257901408806819993, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-      propertyPath: zoomedOutCamera
-      value: 60
+    - target: {fileID: 7751520265820096375, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751520265820096377, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
---- !u!198 &673783804 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4335119230532419419, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-  m_PrefabInstance: {fileID: 673783803}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &691940048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3852,11 +3825,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679382764}
   m_CullTransparentMesh: 1
---- !u!20 &1761805701 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
-  m_PrefabInstance: {fileID: 673783803}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1821202155
 PrefabInstance:
   m_ObjectHideFlags: 0
