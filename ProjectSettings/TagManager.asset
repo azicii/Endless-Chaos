@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Enemy
   - SpawnAtRuntime
-  - Scope
   layers:
   - Default
   - TransparentFX
