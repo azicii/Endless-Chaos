@@ -6,10 +6,12 @@ using UnityEngine;
 public class WeaponSwitcher : MonoBehaviour
 {
     [SerializeField] int weaponIndex;
+    PlayerZoom scope;
 
     void Start()
     {
         SetWeaponActive();
+        scope = GetComponent<PlayerZoom>();
     }
 
     void Update()

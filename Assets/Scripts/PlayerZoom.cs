@@ -12,27 +12,47 @@ public class PlayerZoom : MonoBehaviour
     [SerializeField] float ZoomedSensitivity = 0.5f;
     [SerializeField] float UnzoomedSensitivity = 2f;
 
-    bool togglePlayerZoom = false;
+    public bool togglePlayerZoom = false;
 
     void Update()
+    {
+        HandleZoom();
+    }
+
+    void HandleZoom()
     {
         if (Input.GetMouseButtonDown(1))
         {
             if (togglePlayerZoom == false)
             {
-                togglePlayerZoom = true;
-                FPScamera.fieldOfView = zoomedInCamera;
-                movementScript.mouseLook.XSensitivity = ZoomedSensitivity;
-                movementScript.mouseLook.YSensitivity = ZoomedSensitivity;
+                ZoomIn();
             }
 
             else if (togglePlayerZoom == true)
             {
-                togglePlayerZoom = false;
-                FPScamera.fieldOfView = zoomedOutCamera;
-                movementScript.mouseLook.XSensitivity = UnzoomedSensitivity;
-                movementScript.mouseLook.YSensitivity = UnzoomedSensitivity;
+                ZoomOut();
             }
         }
+    }
+
+    public void ZoomIn()
+    {
+        togglePlayerZoom = true;
+        FPScamera.fieldOfView = zoomedInCamera;
+        movementScript.mouseLook.XSensitivity = ZoomedSensitivity;
+        movementScript.mouseLook.YSensitivity = ZoomedSensitivity;
+    }
+
+    public void ZoomOut()
+    {
+        togglePlayerZoom = false;
+        FPScamera.fieldOfView = zoomedOutCamera;
+        movementScript.mouseLook.XSensitivity = UnzoomedSensitivity;
+        movementScript.mouseLook.YSensitivity = UnzoomedSensitivity;
+    }
+
+    void OnDisable()
+    {
+        ZoomOut();
     }
 }
