@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,61 @@ public class WeaponSwitcher : MonoBehaviour
     void Start()
     {
         SetWeaponActive();
+    }
+
+    void Update()
+    {
+        int previousWeapon = weaponIndex;
+
+        ProcessKeyInput();
+        ProcessScrollWheel();
+
+        if (previousWeapon != weaponIndex)
+        {
+            SetWeaponActive();
+        }
+    }
+
+    private void ProcessKeyInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            weaponIndex = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            weaponIndex = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            weaponIndex = 2;
+        }
+    }
+
+    private void ProcessScrollWheel()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        {
+            if (weaponIndex >= transform.childCount - 1)
+            {
+                weaponIndex = 0;
+            }
+            else
+            {
+                weaponIndex++;
+            }
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            if (weaponIndex == 0)
+            {
+                weaponIndex = transform.childCount - 1;
+            }
+            else
+            {
+                weaponIndex--;
+            }
+        }
     }
 
     private void SetWeaponActive()
