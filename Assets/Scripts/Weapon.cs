@@ -22,26 +22,31 @@ public class Weapon : MonoBehaviour
         parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
     }
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && canShoot)
-        {
-            StartCoroutine(Shoot());
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetMouseButtonDown(0) && canShoot)
+    //    {
+    //        StartCoroutine(Shoot());
+    //    }
+    //}
 
-    public IEnumerator Shoot()
+    private void OnEnable()
     {
-        canShoot = false;
-        if (ammoSlot.currentAmmoCapacity() > 0)
-        {
-            muzzleFlash.Play();
-            ProcessRaycast();
-            ammoSlot.lowerAmmoAmount();
-            yield return new WaitForSeconds(timeBetweenShots);
-        }
         canShoot = true;
     }
+
+    //public IEnumerator Shoot()
+    //{
+    //    canShoot = false;
+    //    if (ammoSlot.currentAmmoCapacity() > 0)
+    //    {
+    //        muzzleFlash.Play();
+    //        ProcessRaycast();
+    //        ammoSlot.lowerAmmoAmount();
+    //        yield return new WaitForSeconds(timeBetweenShots);
+    //    }
+    //    canShoot = true;
+    //}
 
     void ProcessRaycast()
     {

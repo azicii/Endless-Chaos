@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531e0225852ceba478c9bd2de6adf84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 10
+  ammoAmount: 1000
 --- !u!1 &9177521183103980516
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1023503907524402562}
+  - component: {fileID: 1879348842}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -376,6 +377,19 @@ Transform:
   m_Father: {fileID: 400000}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1.553, y: -90.804, z: 2.581}
+--- !u!114 &1879348842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177521183103980516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192ff2f4878ac1b4598355e8f501aa7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponIndex: 1
 --- !u!1001 &1579931197833040037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -435,6 +449,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8914407202638345097, guid: 15a49c29793e6b946b8344a5e261afca, type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914407202638345097, guid: 15a49c29793e6b946b8344a5e261afca, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2000000}
     - target: {fileID: 8914407202638345097, guid: 15a49c29793e6b946b8344a5e261afca, type: 3}
       propertyPath: ammoSlot
       value: 
@@ -515,7 +537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8914407202638345097, guid: ada2587319194f542957a8c2ae277cb9, type: 3}
       propertyPath: ammoSlot
@@ -552,9 +574,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 2000000}
-  range: 100
+  range: 50
   weaponDamage: 10
-  timeBetweenShots: 0.3
+  timeBetweenShots: 0.5
   muzzleFlash: {fileID: 4335119230532419419}
   hitEffectVFX: {fileID: 5358702043929965955, guid: 2994d2c466310664ba2c6be327008c2d, type: 3}
   ammoSlot: {fileID: 115147914}
@@ -615,8 +637,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337074158997199750, guid: 976f611d3eb8e7846bbde90bb13d4ff8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8914407202638345097, guid: 976f611d3eb8e7846bbde90bb13d4ff8, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2000000}
     - target: {fileID: 8914407202638345097, guid: 976f611d3eb8e7846bbde90bb13d4ff8, type: 3}
       propertyPath: ammoSlot
       value: 
