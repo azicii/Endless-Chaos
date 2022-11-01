@@ -43,7 +43,7 @@ public class Weapon : MonoBehaviour
         {
             muzzleFlash.Play();
             ProcessRaycast();
-            ammo.lowerAmmoAmount(ammoType);
+            ammo.DecreaseAmmoAmount(ammoType);
             yield return new WaitForSeconds(timeBetweenShots);
         }
         canShoot = true;

@@ -5,6 +5,8 @@ using UnityEngine;
 public class AmmoPickup : MonoBehaviour
 {
     [SerializeField] float rotateSpeed = 0.2f;
+    [SerializeField] int ammoAmount = 5;
+    [SerializeField] AmmoType ammoType;
 
     void Update()
     {
@@ -16,6 +18,7 @@ public class AmmoPickup : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("pickup aqcuired");
+            FindObjectOfType<Ammo>().IncreaseAmmoAmount(ammoType, ammoAmount);
             Destroy(gameObject);
         }
         else
