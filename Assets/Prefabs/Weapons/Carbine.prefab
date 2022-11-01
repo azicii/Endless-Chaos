@@ -255,15 +255,15 @@ GameObject:
   - component: {fileID: 2337074158996965286}
   - component: {fileID: 2337074159000356742}
   - component: {fileID: 2337074158999389510}
-  - component: {fileID: 8914407202638345097}
   - component: {fileID: 575842743599861801}
+  - component: {fileID: 2132783081}
   m_Layer: 0
   m_Name: Carbine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2337074158996965286
 Transform:
   m_ObjectHideFlags: 0
@@ -333,25 +333,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8914407202638345097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2337074158997199750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fd32b9af1ac0ea4baf69e1b0805ed46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FPCamera: {fileID: 0}
-  range: 35
-  weaponDamage: 10
-  timeBetweenShots: 0.5
-  muzzleFlash: {fileID: 8634937554596946858}
-  hitEffectVFX: {fileID: 5358702043929965955, guid: 2994d2c466310664ba2c6be327008c2d, type: 3}
-  ammoSlot: {fileID: 0}
 --- !u!114 &575842743599861801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +351,26 @@ MonoBehaviour:
   zoomedOutCamera: 60
   ZoomedSensitivity: 0.5
   UnzoomedSensitivity: 2
+--- !u!114 &2132783081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337074158997199750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd32b9af1ac0ea4baf69e1b0805ed46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPCamera: {fileID: 0}
+  range: 50
+  weaponDamage: 10
+  ammoType: 2
+  timeBetweenShots: 0.5
+  muzzleFlash: {fileID: 8634937554596946858}
+  hitEffectVFX: {fileID: 5358702043929965955, guid: 2994d2c466310664ba2c6be327008c2d, type: 3}
+  ammo: {fileID: 0}
 --- !u!1 &2337074158997199752
 GameObject:
   m_ObjectHideFlags: 0

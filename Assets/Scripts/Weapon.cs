@@ -8,10 +8,11 @@ public class Weapon : MonoBehaviour
     [SerializeField] Camera FPCamera;
     [SerializeField] float range = 100f;
     [SerializeField] float weaponDamage = 10f;
+    [SerializeField] AmmoType ammoType;
     [SerializeField] float timeBetweenShots;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffectVFX;
-    [SerializeField] Ammo ammoSlot;
+    [SerializeField] Ammo ammo;
 
     GameObject parentGameObject;
 
@@ -22,31 +23,31 @@ public class Weapon : MonoBehaviour
         parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
     }
 
-    //void Update()
-    //{
-    //    if (Input.GetMouseButtonDown(0) && canShoot)
-    //    {
-    //        StartCoroutine(Shoot());
-    //    }
-    //}
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && canShoot)
+        {
+            StartCoroutine(Shoot());
+        }
+    }
 
     private void OnEnable()
     {
         canShoot = true;
     }
 
-    //public IEnumerator Shoot()
-    //{
-    //    canShoot = false;
-    //    if (ammoSlot.currentAmmoCapacity() > 0)
-    //    {
-    //        muzzleFlash.Play();
-    //        ProcessRaycast();
-    //        ammoSlot.lowerAmmoAmount();
-    //        yield return new WaitForSeconds(timeBetweenShots);
-    //    }
-    //    canShoot = true;
-    //}
+    public IEnumerator Shoot()
+    {
+        canShoot = false;
+        if (ammo.currentAmmoCapacity(ammoType) > 0)
+        {
+            muzzleFlash.Play();
+            ProcessRaycast();
+            ammo.lowerAmmoAmount(ammoType);
+            yield return new WaitForSeconds(timeBetweenShots);
+        }
+        canShoot = true;
+    }
 
     void ProcessRaycast()
     {
