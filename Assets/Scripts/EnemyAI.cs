@@ -29,8 +29,8 @@ public class EnemyAI : MonoBehaviour
     {
         if (health.IsDead())
         {
-            navMeshAgent.enabled = false;
             enabled = false;
+            navMeshAgent.enabled = false;
         }
 
         distanceToTarget = Vector3.Distance(target.position, transform.position);
@@ -60,7 +60,10 @@ public class EnemyAI : MonoBehaviour
 
     void ChaseTarget()
     {
-        navMeshAgent.SetDestination(target.position);
+        if (navMeshAgent.enabled)
+        {
+            navMeshAgent.SetDestination(target.position);
+        }
 
         animator.SetTrigger("isMoving");
         animator.SetBool("isAttacking", false);
