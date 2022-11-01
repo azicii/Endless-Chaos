@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     Animator animator;
 
     NavMeshAgent navMeshAgent;
+    EnemyHealth health;
     //Use Mathf.Infinity this so that the enemyAI doesn't instantiate thinking that its distanceToTarget is 0
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
@@ -21,17 +22,22 @@ public class EnemyAI : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        health = GetComponent<EnemyHealth>();
     }
     
     void Update()
     {
-        distanceToTarget = Vector3.Distance(target.position, transform.position);
+        if (health.IsDead())
+        {
+            navMeshAgent.enabled = false;
+            enabled = false;
+        }
 
+        distanceToTarget = Vector3.Distance(target.position, transform.position);
         if (isProvoked)
         {
             EngageTarget();
         }
-
         else if (distanceToTarget <= chaseRange)
         {
             isProvoked = true;
@@ -63,8 +69,6 @@ public class EnemyAI : MonoBehaviour
     void AttackTarget()
     {
         animator.SetBool("isAttacking", true);
-
-        Debug.Log("HIYA");
     }
 
     void FaceTarget()
