@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Weapon : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffectVFX;
     [SerializeField] Ammo ammo;
+    [SerializeField] TextMeshProUGUI ammoText;
 
     GameObject parentGameObject;
 
@@ -25,10 +27,18 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        DisplayAmmo();
+
         if (Input.GetMouseButtonDown(0) && canShoot)
         {
             StartCoroutine(Shoot());
         }
+    }
+
+    void DisplayAmmo()
+    {
+        int ammoDisplay = ammo.currentAmmoCapacity(ammoType);
+        ammoText.text = ammoDisplay.ToString();
     }
 
     private void OnEnable()

@@ -10,7 +10,12 @@ public class AmmoPickup : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, rotateSpeed, 0);
+        RotatePickup();
+    }
+
+    private void RotatePickup()
+    {
+        transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
     }
 
     void OnTriggerEnter(Collider other)
